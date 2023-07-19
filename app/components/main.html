@@ -1,0 +1,76 @@
+<main class="main">
+    <div class="top-panel">
+        <a href="#" class="logotype">IliaGreen</a>
+        <nav class="menu">
+            <ul class="menu__wrap">
+                <li class="menu__item"><a class="menu__link" href="#home">Home</a></li>
+                <li class="menu__item"><a class="menu__link" href="#news">News</a></li>
+                <li class="menu__item"><a class="menu__link" href="#catalog">Catalog</a></li>
+                <li class="menu__item"><a class="menu__link" href="#about-us">About Us</a></li>
+                <li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="btn-enter">Login</button>
+    </div>
+</main>
+<div class="form">
+    <svg class="form__icon form__close" alt="xmark">
+        <use xlink:href="images/sprite.svg#xmark"></use>
+    </svg>
+    <form action="#" class="form-login form-login-show">
+        <h2 class="form__title">Login</h2>
+        <div class="form__inner">
+            <svg class="form__icon" alt="envelope">
+                <use xlink:href="images/sprite.svg#envelope"></use>
+            </svg>           
+            <input class="form__input" type="email" required>
+            <label class="form__label">Email</label>
+        </div>
+        <div class="form__inner">
+            <svg class="form__icon" alt="lock">
+                <use xlink:href="images/sprite.svg#lock"></use>
+            </svg>
+            <input class="form__input" type="password" required>
+            <label class="form__label">Password</label>
+        </div>
+        <div class="remember-forgot">
+            <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+            <a href="#">Forgot Password?</a>
+        </div>
+        <button class="btn" type="submit">Login</button>
+        <div class="cta-register">
+            <p>Don't have an account? <a class="cta-register__register" href="#">Register</a></p>
+        </div>
+    </form>
+    <form action="#" class="form-registr">
+        <h2 class="form__title">Registration</h2>
+        <div class="form__inner">
+            <svg class="form__icon" alt="user">
+                <use xlink:href="images/sprite.svg#user"></use>
+            </svg>
+            <input class="form__input" type="text" required>
+            <label class="form__label">Username</label>
+        </div>
+        <div class="form__inner">
+            <svg class="form__icon" alt="envelope">
+                <use xlink:href="images/sprite.svg#envelope"></use>
+            </svg>
+            <input class="form__input" type="email" required>
+            <label class="form__label">Email</label>
+        </div>
+        <div class="form__inner">
+            <svg class="form__icon" alt="lock">
+                <use xlink:href="images/sprite.svg#lock"></use>
+            </svg>
+            <input class="form__input" type="password" required>
+            <label class="form__label">Password</label>
+        </div>
+        <div class="remember-forgot">
+            <label><input type="checkbox" checked="checked" name="remember"> I agree to the terms and conditions</label>
+        </div>
+        <button class="btn" type="submit">Registr</button>
+        <div class="cta-register">
+            <p>Already have an account? <a class="cta-register__login" href="#">Login</a></p>
+        </div>
+    </form>
+</div>

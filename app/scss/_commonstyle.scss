@@ -1,0 +1,257 @@
+/*Common style*/
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    background-image: url('../images/background.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+    .main {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .top-panel {
+        max-width: 860px;
+        justify-content: center;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        padding: 20px 0;
+
+        .logotype {
+            font-size: 2em;
+            font-weight: 700;
+            color: #fff;
+            user-select: none;
+            margin-right: 40px;
+        }
+
+        .menu {
+            display: flex;
+
+            & ul {
+                display: flex;
+                align-items: center;
+            }
+
+            & li {
+                margin-right: 40px;
+            }
+
+            & a {
+                position: relative;
+                font-weight: 500;
+                color: #fff;
+                white-space: nowrap;
+            }
+
+            & a::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+                left: 0;
+                bottom: -4px;
+                border-radius: 10px;
+                transform: scaleX(0);
+                transition: transform 0.4s;
+            }
+
+            & a:hover::after {
+                transform: scaleX(1);
+            }
+
+            @media (max-width: 860px) {
+                display: none;
+            }
+        }
+
+        .btn-enter {
+            font-size: 1.2em;
+            font-weight: 500;
+            padding: 12px 48px;
+            background-color: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            border-radius: 10px;
+            transition: 0.4s;
+
+            @media (max-width: 400px) {
+                padding: 8px 24px;
+            }
+
+            &:hover {
+                background-color: #fff;
+                color: #211C40;
+            }
+        }
+    }
+
+    .form {
+        display: none;
+        margin: auto;
+        position: relative;
+        width: 400px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        padding: 40px;
+        overflow: hidden;
+
+        @media (max-width: 400px) {
+            padding: 20px;
+        }
+
+        &-show {
+            display: block;
+        }
+
+        &__inner {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            border-bottom: 2px solid #211C40;
+            margin: 28px 0 14px 0;
+        }
+
+        &__label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-weight: 500;
+            user-select: none;
+        }
+
+        &__title {
+            font-size: 1.5em;
+            font-weight: 700;
+            text-align: center;
+            user-select: none;
+        }
+
+        &__icon {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 16px;
+            right: 6px;
+            fill: #211C40;
+        }
+
+        &__close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 32px;
+            height: 32px;
+            background-color: #211C40;
+            fill: #fff;
+            border-bottom-left-radius: 10px;
+            cursor: pointer;
+        }
+
+        &__input {
+            width: 100%;
+            height: 100%;
+            padding: 0 35px 0 5px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            font-weight: 700;
+            transition: 0.4s;
+        }
+
+        &__input:focus~.form__label,
+        &__input:valid~.form__label {
+            top: -4px;
+        }
+
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9em;
+            font-weight: 500;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            user-select: none;
+
+            & input {
+                vertical-align: middle;
+                accent-color: #211C40;
+            }
+
+            & label:hover,
+            input:hover {
+                cursor: pointer;
+            }
+
+            & a {
+                color: #211C40;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px 0;
+            background-color: #211C40;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .cta-register {
+            font-size: 0.9em;
+            text-align: center;
+            font-weight: 500;
+            line-height: 1.5;
+            margin: 25px 0 10px;
+            user-select: none;
+
+            & a {
+                color: #211C40;
+                font-weight: 600;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .form-login {
+        display: none;
+
+        &-show {
+            display: block;
+        }
+    }
+
+    .form-registr {
+        display: none;
+
+        &-show {
+            display: block;
+        }
+    }
+}
